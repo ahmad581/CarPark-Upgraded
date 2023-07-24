@@ -1,5 +1,5 @@
-<?php include "database/db.php"; ?>
-<?php print_r($_SESSION); ?>
+<?php #include "database/db.php"; ?>
+<?php #print_r($_SESSION); ?>
 
 <?php 
     // global $connection;
@@ -38,3 +38,4 @@
 
     // phpinfo();
 ?>
+
