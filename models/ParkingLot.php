@@ -26,5 +26,15 @@
             . "And It Has " . $this->getNumOfParkingSpaces() . "Parking Spaces"; 
         }
 
+        public function copyObject(ParkingLot $parkingLotTOCopy) {
+            if(!($parkingLotTOCopy instanceof ParkingLot)){
+                echo "<script>window.alert('Something Went Wrong!!! Please Try Again');</script>";
+            } else {
+                $this->ID = $parkingLotTOCopy->getID();
+                $this->parkingLotName = $parkingLotTOCopy->getName();
+                $this->numOfParkingSpaces = $parkingLotTOCopy->getNumOfParkingSpaces();
+                $this->parkingSpaces = $parkingLotTOCopy->getParkingSpaces();
+            }
+        }
     }
 ?>

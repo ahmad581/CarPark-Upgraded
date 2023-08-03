@@ -40,17 +40,27 @@
             $count = 0;
         }
 
+        public function getPersonInfo() {
+            return array (
+                "name" => $person->getName(),
+                "email" => $person->getEmail(),
+                // "password" => $this->getPassword(),
+                "phoneNum" => $this->getPhoneNum(),
+                "violationTickets" => $this->getViolationTickets()
+            );
+        }
+
         public function forgotPassword($newPassword) {
             $this->password = $newPassword;
         }
 
-        public function getInfo() {
-            return array (
-                "name" => $this->name,
-                "email" => $this->email,
-                "phoneNum" => $this->phoneNum
-            );
-        }
+        // public function getInfo() {
+        //     return array (
+        //         "name" => $this->name,
+        //         "email" => $this->email,
+        //         "phoneNum" => $this->phoneNum
+        //     );
+        // }
 
         public function copyObject(Person $personToCopy) {
             if (!($personToCopy instanceof Person)) {

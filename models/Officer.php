@@ -1,19 +1,19 @@
 <?php 
     class Officer extends Person {
         private double $salary;
-        private double $reservationForOthersBalance;
+        private double $reservationBalanceForOthers;
 
         public function __construct(string $name, string $email, string $password, string $phoneNum, double $salary, double $reservationForOthersBalance) {
             parent::__construct($this->name, $this->email, $this->password, $this->phoneNum);
             $this->salary = $salary;
-            $this->reservationForOthersBalance = $reservationForOthersBalance;
+            $this->reservationBalanceForOthers = $reservationBalanceForOthers;
         }
 
         public function getSalary() { return $this->salary; }
-        public function getReservationForOthersBalance() { return $this->reservationForOthersBalance; }
+        public function getReservationBalanceForOthers() { return $this->reservationBalanceForOthers; }
 
         public function setSalary(double $slary) { $this->salary = $salary; }
-        public function setReservationForOthersBalance(double $reservationForOthersBalance) { $this->reservationForOthersBalance = $reservationForOthersBalance; }
+        public function setReservationBalanceForOthers(double $reservationBalanceForOthers) { $this->reservationBalanceForOthers = $reservationBalanceForOthers; }
 
         public function copyObject(Person $personToCopy) {
             if (!($personToCopy instanceof Officer)) {
@@ -21,7 +21,7 @@
             } else {
                 parent::copyObject($personToCopy);
                 $this->salary = $personToCopy->getSalary();
-                $this->reservationForOthersBalance = $personToCopy->getReservationForOthersBalance();
+                $this->reservationBalanceForOthers = $personToCopy->getReservationBalanceForOthers();
             }
         }
 
